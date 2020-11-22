@@ -9,13 +9,14 @@
  * @author brend
  */
 public class Student {
+    //Initializing Variables and Strings
     private String name;
     private String DOB;
     private int age;
     private String username;
     private int ID;
   
-
+    //Constructor
     public Student(String name, int age,String DOB, int ID) {
         this.name = name;
         this.DOB = DOB;
@@ -23,7 +24,7 @@ public class Student {
         this.ID = ID;
     }
 
-    
+    //Getters
     public String getName() {
         return name;
     }
@@ -35,8 +36,9 @@ public class Student {
     public int getAge() {
         return age;
     }
-
+    
     public String getUsername() {
+        //Making and assigning String Username
         this.username = name + age;
         return username;
     }
