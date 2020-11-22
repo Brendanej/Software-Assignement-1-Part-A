@@ -35,12 +35,13 @@ public class Course {
         return CourseInfo;
     }
 
-    public DateTime getStartDate() {
-        return StartDate;
+    public String getStartDate() {
+        return StartDate.toString(DateTimeFormat.shortDate());
+        
     }
 
-    public DateTime getEndDate() {
-        return EndDate;
+    public String getEndDate() {
+        return EndDate.toString(DateTimeFormat.shortDate());
     }
 
 
