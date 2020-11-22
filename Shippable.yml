@@ -1,8 +1,12 @@
 language: java
 
 jdk:
-  - oraclejdk11
-
-after_success:
-  - mvn clean cobertura:cobertura
-  - mvn test
+    - oraclejdk11
+    
+branches:
+    only:
+        - master
+        
+build:
+    ci:
+        - mvn test
