@@ -1,12 +1,9 @@
+  
 language: java
 
 jdk:
-    - oraclejdk11
-    
-branches:
-    only:
-        - master
-        
+  - oraclejdk8
+
 build:
-    ci:
-        - mvn test
+ci:
+  - mvn test
