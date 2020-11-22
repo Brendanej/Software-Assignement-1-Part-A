@@ -8,9 +8,11 @@
  *
  * @author brend
  */
+//importing libraries
 import org.joda.time.DateTime;
 
 public class Course {
+    //Initialising Strings and Arrays
     private String CourseName;
     private Module[] Modules;
     private DateTime StartDate;
@@ -18,7 +20,7 @@ public class Course {
     private Student[] Students;
    
    
-
+    //Constructor
     public Course(String CourseName, Module[] Modules, DateTime StartDate, DateTime EndDate,Student[] Students) {
         this.CourseName = CourseName;
         this.Modules = Modules;
@@ -26,22 +28,23 @@ public class Course {
         this.EndDate = EndDate;
         this.Students = Students;
     }
-
+    //Getters
     public String getCourseName() {
         return CourseName;
     }
+    
     public String getCourseInfo() {
+        //Making and assigning CourseInfo String.
         String CourseInfo = CourseName +StartDate +EndDate;
         return CourseInfo;
     }
 
-    public String getStartDate() {
-        return StartDate.toString(DateTimeFormat.shortDate());
-        
+    public DateTime getStartDate() {
+        return StartDate;
     }
 
-    public String getEndDate() {
-        return EndDate.toString(DateTimeFormat.shortDate());
+    public DateTime getEndDate() {
+        return EndDate;
     }
 
 
